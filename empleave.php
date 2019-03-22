@@ -1,0 +1,72 @@
+<?php
+
+require_once ('process/dbh.php');
+
+//$sql = "SELECT * from `employee_leave`";
+$sql = "Select employee.id, employee.firstName, employee.lastName, employee_leave.start, employee_leave.end, employee_leave.reason, employee_leave.status From employee, employee_leave Where employee.id = employee_leave.id";
+
+//echo "$sql";
+$result = mysqli_query($conn, $sql);
+
+?>
+
+
+
+<html>
+<head>
+	<title>Employee Leave | Admin Panel | XYZ Corporation</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body bgcolor="#ADD8E6">
+	
+	<header>
+		<nav>
+			<h1>XYZ Corp.</h1>
+			<ul id="navli">
+				<li><a class="homeblack" href="aloginwel.php">HOME</a></li>
+				<li><a class="homeblack" href="addemp.php">Add Employee</a></li>
+				<li><a class="homeblack" href="viewemp.php">View Employee</a></li>
+				<li><a class="homered" href="empleave.php">Employee Leave</a></li>
+				<li><a class="homeblack" href="elogin.html">Log Out</a></li>
+			</ul>
+		</nav>
+	</header>
+	 
+	<div class="divider"></div>
+	<div id="divimg">
+		<table width="600" border = "1" cellpadding="1" cellspacing="1" id="table" class="table-emp">
+			<tr>
+				<th>Emp. ID</th>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Start Date</th>
+				<th>End Date</th>
+				<th>Total Days</th>
+				<th>Reason</th>
+				<th>Status</th>
+				<th>Options</th>
+			</tr>
+
+			<?php
+				while ($employee = mysqli_fetch_assoc($result)) {
+					echo "<tr>";
+					echo "<td>".$employee['id']."</td>";
+					echo "<td>".$employee['firstName']."</td>";
+					echo "<td>".$employee['lastName']."</td>";
+					echo "<td>".$employee['start']."</td>";
+					echo "<td>".$employee['end']."</td>";
+					echo "<td>".$employee['total']."</td>";
+					echo "<td>".$employee['reason']."</td>";
+					echo "<td>".$employee['status']."</td>";
+					echo "<td><a href=\"approve.php?id=$employee[id]\"  onClick=\"return confirm('Are you sure you want to Approve the request?')\">Approve</a> | <a href=\"cancel.php?id=$employee[id]\" onClick=\"return confirm('Are you sure you want to Canel the request?')\">Cancel</a></td>";
+
+				}
+
+
+			?>
+
+		</table>
+		
+	</div>
+</body>
+</html>

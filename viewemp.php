@@ -20,9 +20,10 @@ $result = mysqli_query($conn, $sql);
 		<nav>
 			<h1>XYZ Corp.</h1>
 			<ul id="navli">
-				<li><a class="homeblack" href="index.html">HOME</a></li>
+				<li><a class="homeblack" href="aloginwel.php">HOME</a></li>
 				<li><a class="homeblack" href="addemp.php">Add Employee</a></li>
 				<li><a class="homered" href="viewemp.php">View Employee</a></li>
+				<li><a class="homeblack" href="empleave.php">Employee Leave</a></li>
 				<li><a class="homeblack" href="elogin.html">Log Out</a></li>
 			</ul>
 		</nav>

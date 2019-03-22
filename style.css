@@ -34,15 +34,29 @@ nav ul li{
 	color: white;
 	float: left;
 	margin-left: 12px;
+	
 
 }
 
 nav ul li a{
 	color: white;
-	text-decoration: none;
-	
-
+	text-decoration: none;	
 }
+
+
+nav ul ul{
+	display: none;
+	position: absolute;
+}
+
+#navli ul li ul:hovar{
+	visibility: visible;
+	display: block;
+}
+
+
+
+
 
 #navli{
 	font-family: 'Montserrat', sans-serif;
@@ -114,3 +128,5 @@ nav ul li a{
 	font-family: 'Montserrat', sans-serif;
 	text-align: center;
 }
+
+

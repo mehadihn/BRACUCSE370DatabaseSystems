@@ -8,9 +8,10 @@
 		<nav>
 			<h1>XYZ Corp.</h1>
 			<ul id="navli">
-				<li><a class="homeblack" href="index.html">HOME</a></li>
+				<li><a class="homeblack" href="aloginwel.php">HOME</a></li>
 				<li><a class="homered" href="addemp.php">Add Employee</a></li>
 				<li><a class="homeblack" href="viewemp.php">View Employee</a></li>
+				<li><a class="homeblack" href="empleave.php">Employee Leave</a></li>
 				<li><a class="homeblack" href="elogin.html">Log Out</a></li>
 			</ul>
 		</nav>
@@ -32,11 +33,6 @@
 			<input type="text" name="degree" id="textField" placeholder="Enter Degree" required="required"><br><br>
 			<input type="number" name="salary" id="textField" placeholder="Enter Salary" required="required"><br><br>
 			<input type="submit" name="subButton" id="sub" value="Add Employee">
-
-				
-
-
-
 
 
 		</form>

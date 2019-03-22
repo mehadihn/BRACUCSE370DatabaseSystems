@@ -6,22 +6,22 @@ $email = $_POST['mailuid'];
 $password = $_POST['pwd'];
 
 $sql = "SELECT * from `employee` WHERE email = '$email' AND password = '$password'";
-
-echo "$sql";
+$sqlid = "SELECT id from `employee` WHERE email = '$email' AND password = '$password'";
 
 $result = mysqli_query($conn, $sql);
+$id = mysqli_query($conn , $sqlid);
 
+$empid = "";
 if(mysqli_num_rows($result) == 1){
-	// while ($row = mysqli_fetch_assoc($result)){
-	// 	$id = $row["id"];
-	// 	$email = $row["email"];
-	// 	session_start();
-	// 	$_SESSION['id'] = $id;
-	// 	$_SESSION['email'] = $email;
-	// }
+	
+	$employee = mysqli_fetch_array($id);
+	$empid = ($employee['id']);
+	
 
 	echo ("logged in");
-	header("Location: ..//eloginwel.html");
+	echo ("$empid");
+	
+	header("Location: ..//eloginwel.php?id=$empid");
 }
 
 else{

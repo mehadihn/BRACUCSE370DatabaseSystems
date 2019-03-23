@@ -14,25 +14,71 @@ $degree = $_POST['degree'];
 $salary = $_POST['salary'];
 
 
-$sql = "INSERT INTO `employee`(`id`, `firstName`, `lastName`, `email`, `password`, `gender`, `contact`, `nid`, `salary`, `address`, `dept`, `degree` ) VALUES ('','$firstname','$lastName','$email','$email','$gender','$contact','$nid', '$salary', '$address','$dept','$degree')";
+
+$files = $_FILES['file'];
+$filename = $files['name'];
+$filrerror = $files['error'];
+$filetemp = $files['tmp_name'];
+$fileext = explode('.', $filename);
+$filecheck = strtolower(end($fileext));
+$fileextstored = array('png' , 'jpg' , 'jpeg');
+
+if(in_array($filecheck, $fileextstored)){
+
+    $destinationfile = 'images/'.$filename;
+    move_uploaded_file($filetemp, $destinationfile);
+
+    $sql = "INSERT INTO `employee`(`id`, `firstName`, `lastName`, `email`, `password`, `gender`, `contact`, `nid`, `salary`, `address`, `dept`, `degree`, `pic` ) VALUES ('','$firstname','$lastName','$email','$email','$gender','$contact','$nid', '$salary', '$address','$dept','$degree' , '$destinationfile')";
 
 //echo "$sql";
 
 $result = mysqli_query($conn, $sql);
 //echo "$result";
 if(($result) == 1){
-	
-	echo ("<SCRIPT LANGUAGE='JavaScript'>
+    
+    echo ("<SCRIPT LANGUAGE='JavaScript'>
     window.alert('Succesfully Registered')
-    window.location.href='..//addemp.php';
+    window.location.href='..//viewemp.php';
     </SCRIPT>");
-	//header("Location: ..//aloginwel.php");
+    //header("Location: ..//aloginwel.php");
 }
 
 else{
-	echo ("<SCRIPT LANGUAGE='JavaScript'>
+    echo ("<SCRIPT LANGUAGE='JavaScript'>
     window.alert('Failed to Registere')
     window.location.href='javascript:history.go(-1)';
     </SCRIPT>");
 }
+
+}
+
+else{
+    $sql = "INSERT INTO `employee`(`id`, `firstName`, `lastName`, `email`, `password`, `gender`, `contact`, `nid`, `salary`, `address`, `dept`, `degree`, `pic` ) VALUES ('','$firstname','$lastName','$email','$email','$gender','$contact','$nid', '$salary', '$address','$dept','$degree' , 'images/no.jpg')";
+
+//echo "$sql";
+
+$result = mysqli_query($conn, $sql);
+//echo "$result";
+if(($result) == 1){
+    
+    echo ("<SCRIPT LANGUAGE='JavaScript'>
+    window.alert('Succesfully Registered')
+    window.location.href='..//viewemp.php';
+    </SCRIPT>");
+    //header("Location: ..//aloginwel.php");
+}
+
+else{
+    echo ("<SCRIPT LANGUAGE='JavaScript'>
+    window.alert('Failed to Registere')
+    window.location.href='javascript:history.go(-1)';
+    </SCRIPT>");
+}
+}
+
+
+
+
+
+
 ?>

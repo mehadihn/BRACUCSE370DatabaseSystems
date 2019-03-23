@@ -19,7 +19,7 @@
 	
 	<div class="divider"></div>
 	<div class = "simple-form">
-		<form id = "registration" action="process/addempprocess.php" method="POST">
+		<form id = "registration" action="process/addempprocess.php" method="POST" enctype="multipart/form-data">
 			<br>
 			<input type="text" name="firstName" id="textField" placeholder="Enter First Name" required="required"><br><br>
 			<input type="text" name="lastName" id="textField" placeholder="Enter Last Name" required="required"><br><br>
@@ -32,6 +32,7 @@
 			<input type="text" name="dept" id="textField" placeholder="Enter Department" required="required"><br><br>
 			<input type="text" name="degree" id="textField" placeholder="Enter Degree" required="required"><br><br>
 			<input type="number" name="salary" id="textField" placeholder="Enter Salary" required="required"><br><br>
+			<input type="file" name="file" id="textField" ><br><br>
 			<input type="submit" name="subButton" id="sub" value="Add Employee">
 
 

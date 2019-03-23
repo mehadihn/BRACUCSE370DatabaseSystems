@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 22, 2019 at 06:19 PM
+-- Generation Time: Mar 23, 2019 at 12:18 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.1
 
@@ -59,18 +59,17 @@ CREATE TABLE `employee` (
   `salary` int(10) DEFAULT NULL,
   `address` varchar(100) DEFAULT NULL,
   `dept` varchar(100) NOT NULL,
-  `degree` varchar(100) NOT NULL
+  `degree` varchar(100) NOT NULL,
+  `pic` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `employee`
 --
 
-INSERT INTO `employee` (`id`, `firstName`, `lastName`, `email`, `password`, `gender`, `contact`, `nid`, `salary`, `address`, `dept`, `degree`) VALUES
-(1, 'user', 'user', 'user', 'user', 'Male', 123456789, 1122334455, 100000, 'UK', 'HR', 'BBA'),
-(2, 'Mehadi', 'Hassan', 'mehadihassan116@gmail.com', 'mehadihassan116@gmail.com', 'Male', 1674775587, 12345678, 30000, 'Razarbagh', 'IT', 'CSE'),
-(3, 'Shoiab', 'Dipu', 'shoaib@gmail.com', 'shoaib@gmail.com', 'Male', 1782828282, 13354654, 1000000, 'Uttora', 'CSE', 'Professor'),
-(4, 'Shemoto', 'Das', 'shemonto@gmail.com', 'shemonto@gmail.com', 'Male', 1921212121, 146945454, 343434343, 'Mohakhali', 'CSE', 'Professor');
+INSERT INTO `employee` (`id`, `firstName`, `lastName`, `email`, `password`, `gender`, `contact`, `nid`, `salary`, `address`, `dept`, `degree`, `pic`) VALUES
+(101, 'User', 'User', 'user', 'user', 'Male', 178888888, 11111, 11111, 'UK', 'Dept', 'CSE', 'images/no.jpg'),
+(102, 'Mehadi', 'Hassan', 'mehadihassan116@gmail.com', 'mehadihassan116@gmail.com', 'Male', 1674775587, 1122334455, 55000, 'Razarbagh', 'Development', 'Head', 'images/Untitled.png');
 
 -- --------------------------------------------------------
 
@@ -86,15 +85,6 @@ CREATE TABLE `employee_leave` (
   `reason` char(100) DEFAULT NULL,
   `status` char(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `employee_leave`
---
-
-INSERT INTO `employee_leave` (`id`, `token`, `start`, `end`, `reason`, `status`) VALUES
-(2, 101, '2019-03-23', '2019-03-25', 'Sick', 'Pending'),
-(1, 102, '2019-04-02', '2019-04-12', 'Vacation', 'Pending'),
-(1, 103, '2019-04-13', '2019-04-16', 'GOT', 'Approved');
 
 --
 -- Indexes for dumped tables
@@ -134,7 +124,7 @@ ALTER TABLE `alogin`
 -- AUTO_INCREMENT for table `employee`
 --
 ALTER TABLE `employee`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=103;
 
 --
 -- AUTO_INCREMENT for table `employee_leave`

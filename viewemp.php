@@ -34,8 +34,8 @@ $result = mysqli_query($conn, $sql);
 		<table width="600" border = "1" cellpadding="1" cellspacing="1" id="table" class="table-emp">
 			<tr>
 				<th>Emp. ID</th>
-				<th>First Name</th>
-				<th>Last Name</th>
+				<th>Name</th>
+				
 				<th>Email</th>
 				<th>Gender</th>
 				<th>Contact</th>
@@ -44,6 +44,7 @@ $result = mysqli_query($conn, $sql);
 				<th>Department</th>
 				<th>Degree</th>
 				<th>Salary</th>
+				<th>Picture</th>
 				<th>Options</th>
 			</tr>
 
@@ -51,8 +52,8 @@ $result = mysqli_query($conn, $sql);
 				while ($employee = mysqli_fetch_assoc($result)) {
 					echo "<tr>";
 					echo "<td>".$employee['id']."</td>";
-					echo "<td>".$employee['firstName']."</td>";
-					echo "<td>".$employee['lastName']."</td>";
+					echo "<td>".$employee['firstName']." ".$employee['lastName']."</td>";
+					
 					echo "<td>".$employee['email']."</td>";
 					echo "<td>".$employee['gender']."</td>";
 					echo "<td>".$employee['contact']."</td>";
@@ -61,6 +62,7 @@ $result = mysqli_query($conn, $sql);
 					echo "<td>".$employee['dept']."</td>";
 					echo "<td>".$employee['degree']."</td>";
 					echo "<td>".$employee['salary']."</td>";
+					echo "<td><img src='process/".$employee['pic']."' height = 60px width = 60px></td>";
 					echo "<td><a href=\"edit.php?id=$employee[id]\">Edit</a> | <a href=\"delete.php?id=$employee[id]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>";
 
 				}

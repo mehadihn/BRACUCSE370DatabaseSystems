@@ -78,94 +78,19 @@ nav ul ul{
 
 }
 
-#divimg{
-	
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-image: : url('../images/back.jpg');
-	padding: 0px;
-	margin: 10px;
-	height: 100%;
-	width: 100%;
-}
-
-
-#registration{
-	padding: 2px 2px 2px 2px;
-	text-align: center;
-	background-color: #F0FFFF;
-	height: 100%;
-	width: auto;
-	background-position: center;
-}
-
-#textField{
-	width: 350px;
-	height: 50px;
-	padding: 5px;
-	border-radius: 5px;
-	font-family: 'Montserrat', sans-serif;
-}
-
-
-#gender{
-	font-family: 'Montserrat', sans-serif;
-}
-
-#sub{
-	width: 350px;
-	height: 50px;
-	padding: 5px;
-	border-radius: 5px;
-	outline: 0px;
-	background-color: #0c6996;
-}
-
-.table-emp{
-	padding: 5px;
-	height: auto;
-	width: 100%;
-	font-family: 'Montserrat', sans-serif;
-	text-align: center;
-}
-
-
-
-.simple-form1{
-	margin-left: 10px; 
-	padding: 2px 2px 2px 2px;
-	text-align: center;
-	background-color: #F0FFFF;
-	height: auto;
-	width: auto;
-	background-position: center;
-	
-}
-
-
-
-.leavetable{
-	width: 100%;
-	height: auto;
-}
-
-#textField{
-	width: 350px;
-	height: 50px;
-	padding: 5px;
-	border-radius: 5px;
-	font-family: 'Montserrat', sans-serif;
-}
-
-
-
 .info{
-	margin-left: 10px;
-	padding: 100px;
+	margin: 10px;
+	font-family: 'Montserrat', sans-serif;
+	border: 5px solid green;
+	width: 300px;
+	height: auto;
+	position: static;
+	left: 100px;
 }
 
-
-
-.h2{
-	font-family: 'Montserrat', sans-serif;
+.name{
+	font-size: 20px;
+	margin-left: 10px;
+	width: 200px;
+	float: right;
 }

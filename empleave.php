@@ -38,8 +38,8 @@ $result = mysqli_query($conn, $sql);
 			<tr>
 				<th>Emp. ID</th>
 				<th>Token</th>
-				<th>First Name</th>
-				<th>Last Name</th>
+				<th>Name</th>
+				
 				<th>Start Date</th>
 				<th>End Date</th>
 				<th>Total Days</th>
@@ -60,8 +60,8 @@ $result = mysqli_query($conn, $sql);
 					echo "<tr>";
 					echo "<td>".$employee['id']."</td>";
 					echo "<td>".$employee['token']."</td>";
-					echo "<td>".$employee['firstName']."</td>";
-					echo "<td>".$employee['lastName']."</td>";
+					echo "<td>".$employee['firstName']." ".$employee['lastName']."</td>";
+					
 					echo "<td>".$employee['start']."</td>";
 					echo "<td>".$employee['end']."</td>";
 					echo "<td>".$interval->days."</td>";

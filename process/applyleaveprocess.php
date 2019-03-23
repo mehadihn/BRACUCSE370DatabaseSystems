@@ -4,11 +4,11 @@ require_once ('dbh.php');
 
 //getting id of the data from url
 $id = $_GET['id'];
-echo $id;
+//echo $id;
 $reason = $_POST['reason'];
 
 $start = $_POST['start'];
-echo "$reason";
+//echo "$reason";
 $end = $_POST['end'];
 
 $sql = "INSERT INTO `employee_leave`(`id`,`token`, `start`, `end`, `reason`, `status`) VALUES ('$id','','$start','$end','$reason','Pending')";

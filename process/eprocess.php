@@ -18,8 +18,8 @@ if(mysqli_num_rows($result) == 1){
 	$empid = ($employee['id']);
 	
 
-	echo ("logged in");
-	echo ("$empid");
+	//echo ("logged in");
+	//echo ("$empid");
 	
 	header("Location: ..//eloginwel.php?id=$empid");
 }

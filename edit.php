@@ -58,7 +58,7 @@ $result = mysqli_query($conn, "UPDATE `employee` SET `firstName`='$firstname',`l
 	$nid = $res['nid'];
 	$dept = $res['dept'];
 	$degree = $res['degree'];
-	// $salary = $res['salary'];
+	
 }
 }
 

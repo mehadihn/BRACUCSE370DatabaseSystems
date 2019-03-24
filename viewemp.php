@@ -25,7 +25,7 @@ $result = mysqli_query($conn, $sql);
 				<li><a class="homered" href="viewemp.php">View Employee</a></li>
 				<li><a class="homeblack" href="salaryemp.php">Salary Table</a></li>
 				<li><a class="homeblack" href="empleave.php">Employee Leave</a></li>
-				<li><a class="homeblack" href="elogin.html">Log Out</a></li>
+				<li><a class="homeblack" href="alogin.html">Log Out</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -36,7 +36,6 @@ $result = mysqli_query($conn, $sql);
 			<tr>
 				<th align = "center">Emp. ID</th>
 				<th align = "center">Name</th>
-				
 				<th align = "center">Email</th>
 				<th align = "center">Birthday</th>
 				<th align = "center">Gender</th>

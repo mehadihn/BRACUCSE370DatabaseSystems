@@ -86,8 +86,7 @@
 	<table>
 			<tr>
 				<th align = "center">Emp. ID</th>
-				<th align = "center">First Name</th>
-				<th align = "center">Last Name</th>
+				<th align = "center">Name</th>
 				<th align = "center">Start Date</th>
 				<th align = "center">End Date</th>
 				<th align = "center">Total Days</th>
@@ -109,8 +108,8 @@
 
 					echo "<tr>";
 					echo "<td>".$employee['id']."</td>";
-					echo "<td>".$employee['firstName']."</td>";
-					echo "<td>".$employee['lastName']."</td>";
+					echo "<td>".$employee['firstName']." ".$employee['lastName']."</td>";
+					
 					echo "<td>".$employee['start']."</td>";
 					echo "<td>".$employee['end']."</td>";
 					echo "<td>".$interval->days."</td>";

@@ -15,9 +15,9 @@ $result = mysqli_query($conn, $sql);
 <html>
 <head>
 	<title>Employee Leave | Admin Panel | XYZ Corporation</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="styleview.css">
 </head>
-<body bgcolor="#ADD8E6">
+<body>
 	
 	<header>
 		<nav>
@@ -26,6 +26,7 @@ $result = mysqli_query($conn, $sql);
 				<li><a class="homeblack" href="aloginwel.php">HOME</a></li>
 				<li><a class="homeblack" href="addemp.php">Add Employee</a></li>
 				<li><a class="homeblack" href="viewemp.php">View Employee</a></li>
+				<li><a class="homeblack" href="salaryemp.php">Salary Table</a></li>
 				<li><a class="homered" href="empleave.php">Employee Leave</a></li>
 				<li><a class="homeblack" href="elogin.html">Log Out</a></li>
 			</ul>
@@ -34,12 +35,11 @@ $result = mysqli_query($conn, $sql);
 	 
 	<div class="divider"></div>
 	<div id="divimg">
-		<table width="600" border = "1" cellpadding="1" cellspacing="1" id="table" class="table-emp">
+		<table>
 			<tr>
 				<th>Emp. ID</th>
 				<th>Token</th>
 				<th>Name</th>
-				
 				<th>Start Date</th>
 				<th>End Date</th>
 				<th>Total Days</th>

@@ -11,7 +11,7 @@
 <html>
 <head>
 	<title>Apply Leave | Employee Panel | XYZ Corporation</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="styleapply.css">
 </head>
 <body bgcolor="#F0FFFF">
 	
@@ -28,28 +28,71 @@
 	</header>
 	 
 	<div class="divider"></div>
-	
-		<div class = "simple-form1">
-		<form action="process/applyleaveprocess.php?id=<?php echo $id?>" method="POST">
-			<br>
-			<input type="text" name="reason" id="textField" placeholder="Enter Your Reason" required="required"><br><br>
-			<input type="date" name="start" id="textField" required="required"><br><br>
-			<input type="date" name="end" id="textField"  required="required"><br><br>
-			<input type="submit" name="subButton" id="sub" value="Submit">
-		</form>
-		
-	</div>
+	<div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
+        <div class="wrapper wrapper--w680">
+            <div class="card card-1">
+                <div class="card-heading"></div>
+                <div class="card-body">
+                    <h2 class="title">Apply Leave Form</h2>
+                    <form action="process/applyleaveprocess.php?id=<?php echo $id?>" method="POST">
 
-	<table class="leavetable" width="600" border = "1" cellpadding="1" cellspacing="1" id="table" class="table-emp">
+
+                        <div class="input-group">
+                            <input class="input--style-1" type="text" placeholder="Reason" name="reason">
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <input class="input--style-1" type="date" placeholder="start" name="start">
+                                   
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <input class="input--style-1" type="date" placeholder="end" name="end">
+                                   
+                                </div>
+                            </div>
+                        </div>
+                        
+
+
+
+                        <div class="p-t-20">
+                            <button class="btn btn--radius btn--green" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<table>
 			<tr>
-				<th>Emp. ID</th>
-				<th>First Name</th>
-				<th>Last Name</th>
-				<th>Start Date</th>
-				<th>End Date</th>
-				<th>Total Days</th>
-				<th>Reason</th>
-				<th>Status</th>
+				<th align = "center">Emp. ID</th>
+				<th align = "center">First Name</th>
+				<th align = "center">Last Name</th>
+				<th align = "center">Start Date</th>
+				<th align = "center">End Date</th>
+				<th align = "center">Total Days</th>
+				<th align = "center">Reason</th>
+				<th align = "center">Status</th>
 			</tr>
 
 

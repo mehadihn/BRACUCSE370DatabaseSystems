@@ -127,6 +127,12 @@ nav ul ul{
 	width: 100%;
 	font-family: 'Montserrat', sans-serif;
 	text-align: center;
+	background-color: #4CAF50;
+}
+
+.table-emp tr th {
+  background-color: #4CAF50;
+  color: white;
 }
 
 

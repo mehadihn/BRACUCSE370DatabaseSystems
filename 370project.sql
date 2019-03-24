@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 24, 2019 at 02:24 PM
+-- Generation Time: Mar 24, 2019 at 05:56 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.1
 
@@ -52,7 +52,7 @@ CREATE TABLE `employee` (
   `firstName` varchar(100) NOT NULL,
   `lastName` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `password` varchar(100) NOT NULL,
+  `password` text NOT NULL,
   `birthday` date NOT NULL,
   `gender` varchar(10) NOT NULL,
   `contact` int(15) NOT NULL,
@@ -68,8 +68,8 @@ CREATE TABLE `employee` (
 --
 
 INSERT INTO `employee` (`id`, `firstName`, `lastName`, `email`, `password`, `birthday`, `gender`, `contact`, `nid`, `address`, `dept`, `degree`, `pic`) VALUES
-(132, 'John', 'Doe', 'user@xyz.com', '1234', '2019-03-01', 'Male', 1981818181, 1212121212, 'UK', 'CSE', 'BSc.', 'images/no.jpg'),
-(133, 'Mehadi', 'Hassan', 'mehadi@xyz.com', '1234', '2013-06-11', 'Male', 2147483647, 121212121, 'Razarbagh', 'IT', 'Head', 'images/Untitled.png');
+(134, 'Mehadi', 'Hassan', 'mehadi@xyz.corp', 'mehadi', '1997-08-13', 'Male', 1674775587, 123456789, 'Razarbagh', 'IT', 'Head', 'images/Untitled.png'),
+(135, 'John', 'Doe', 'john@xyz.corp', '1234', '2019-03-24', 'Male', 2147483647, 2147483647, 'UK', 'Management', 'HR', 'images/no.jpg');
 
 -- --------------------------------------------------------
 
@@ -91,7 +91,9 @@ CREATE TABLE `employee_leave` (
 --
 
 INSERT INTO `employee_leave` (`id`, `token`, `start`, `end`, `reason`, `status`) VALUES
-(133, 108, '2019-04-14', '2019-03-31', 'GOT', 'Approved');
+(134, 109, '2019-04-14', '2019-03-31', 'GOT', 'Approved'),
+(134, 110, '2019-03-24', '2019-03-07', 'Sick', 'Cancelled'),
+(135, 111, '2019-03-16', '2019-03-22', 'Vacation', 'Approved');
 
 -- --------------------------------------------------------
 
@@ -111,8 +113,8 @@ CREATE TABLE `salary` (
 --
 
 INSERT INTO `salary` (`id`, `base`, `bonus`, `total`) VALUES
-(132, 1111111, 0, 1111111),
-(133, 670000, 0, 670000);
+(134, 65000, 0, 65000),
+(135, 40000, 0, 40000);
 
 --
 -- Indexes for dumped tables
@@ -158,13 +160,13 @@ ALTER TABLE `alogin`
 -- AUTO_INCREMENT for table `employee`
 --
 ALTER TABLE `employee`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=134;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=136;
 
 --
 -- AUTO_INCREMENT for table `employee_leave`
 --
 ALTER TABLE `employee_leave`
-  MODIFY `token` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=109;
+  MODIFY `token` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=112;
 
 --
 -- Constraints for dumped tables

@@ -22,6 +22,7 @@
 			<ul id="navli">
 				<li><a class="homered" href="eloginwel.php?id=<?php echo $id?>"">HOME</a></li>
 				<li><a class="homeblack" href="myprofile.php?id=<?php echo $id?>"">My Profile</a></li>
+				<li><a class="homeblack" href="empproject.php?id=<?php echo $id?>"">My Projects</a></li>
 				<li><a class="homeblack" href="applyleave.php?id=<?php echo $id?>"">Apply Leave</a></li>
 				<li><a class="homeblack" href="elogin.html">Log Out</a></li>
 			</ul>
@@ -30,6 +31,10 @@
 	 
 	<div class="divider"></div>
 	<div id="divimg">
+		
+
+
+		
 		<h2>Welcome <?php echo "$empName"; ?>
 		
 		

@@ -21,6 +21,7 @@
 			<ul id="navli">
 				<li><a class="homeblack" href="eloginwel.php?id=<?php echo $id?>"">HOME</a></li>
 				<li><a class="homeblack" href="myprofile.php?id=<?php echo $id?>"">My Profile</a></li>
+				<li><a class="homeblack" href="empproject.php?id=<?php echo $id?>"">My Projects</a></li>
 				<li><a class="homered" href="applyleave.php?id=<?php echo $id?>"">Apply Leave</a></li>
 				<li><a class="homeblack" href="elogin.html">Log Out</a></li>
 			</ul>

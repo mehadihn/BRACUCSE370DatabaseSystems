@@ -9,7 +9,12 @@ $result = mysqli_query($conn, $sql);
 
   $id = (isset($_GET['id']) ? $_GET['id'] : '');
   $sql = "SELECT * from `employee` WHERE id=$id";
+  $sql2 = "SELECT total from `salary` WHERE id = $id";
   $result = mysqli_query($conn, $sql);
+  $result2 = mysqli_query($conn , $sql2);
+  $salary = mysqli_fetch_array($result2);
+  $empS = ($salary['total']);
+ 
   if($result){
   while($res = mysqli_fetch_assoc($result)){
   $firstname = $res['firstName'];
@@ -51,6 +56,7 @@ $result = mysqli_query($conn, $sql);
       <ul id="navli">
         <li><a class="homeblack" href="eloginwel.php?id=<?php echo $id?>"">HOME</a></li>
         <li><a class="homered" href="myprofile.php?id=<?php echo $id?>"">My Profile</a></li>
+        <li><a class="homeblack" href="empproject.php?id=<?php echo $id?>"">My Projects</a></li>
         <li><a class="homeblack" href="applyleave.php?id=<?php echo $id?>"">Apply Leave</a></li>
         <li><a class="homeblack" href="elogin.html">Log Out</a></li>
       </ul>
@@ -135,9 +141,16 @@ $result = mysqli_query($conn, $sql);
                         </div>
 
                         <div class="input-group">
-                          <p>degree</p>
+                          <p>Degree</p>
                             <input class="input--style-1" type="text" name="degree" value="<?php echo $degree;?>" readonly>
                         </div>
+
+
+                        <div class="input-group">
+                          <p>Total Salary</p>
+                            <input class="input--style-1" type="text" name="degree" value="<?php echo $empS;?>" readonly>
+                        </div>
+
                         <input type="hidden" name="id" id="textField" value="<?php echo $id;?>" required="required"><br><br>
                         <div class="p-t-20">
                             <button class="btn btn--radius btn--green"  name="send" >Update Info</button>

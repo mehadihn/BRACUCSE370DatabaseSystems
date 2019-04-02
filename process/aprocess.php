@@ -19,6 +19,9 @@ if(mysqli_num_rows($result) == 1){
 }
 
 else{
-	echo "Invalid";
+	echo ("<SCRIPT LANGUAGE='JavaScript'>
+    window.alert('Invalid Email or Password')
+    window.location.href='javascript:history.go(-1)';
+    </SCRIPT>");
 }
 ?>

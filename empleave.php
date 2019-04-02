@@ -24,8 +24,11 @@ $result = mysqli_query($conn, $sql);
 			<h1>XYZ Corp.</h1>
 			<ul id="navli">
 				<li><a class="homeblack" href="aloginwel.php">HOME</a></li>
+				
 				<li><a class="homeblack" href="addemp.php">Add Employee</a></li>
 				<li><a class="homeblack" href="viewemp.php">View Employee</a></li>
+				<li><a class="homeblack" href="assign.php">Assign Project</a></li>
+				<li><a class="homeblack" href="assignproject.php">Project Status</a></li>
 				<li><a class="homeblack" href="salaryemp.php">Salary Table</a></li>
 				<li><a class="homered" href="empleave.php">Employee Leave</a></li>
 				<li><a class="homeblack" href="alogin.html">Log Out</a></li>

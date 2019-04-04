@@ -35,7 +35,7 @@ $result = mysqli_query($conn, $sql);
 
 <html>
 <head>
-  <title>View Employee |  Admin Panel | XYZ Corporation</title>
+  <title>My Profile | XYZ Corporation</title>
   <!-- Icons font CSS-->
     <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
     <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">

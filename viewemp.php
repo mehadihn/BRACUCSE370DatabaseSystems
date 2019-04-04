@@ -1,7 +1,7 @@
 <?php
 
 require_once ('process/dbh.php');
-$sql = "SELECT * from `employee` order by id";
+$sql = "SELECT * from `employee` , `rank` WHERE employee.id = rank.eid";
 
 //echo "$sql";
 $result = mysqli_query($conn, $sql);
@@ -48,6 +48,7 @@ $result = mysqli_query($conn, $sql);
 				<th align = "center">Address</th>
 				<th align = "center">Department</th>
 				<th align = "center">Degree</th>
+				<th align = "center">Point</th>
 				
 				
 				<th align = "center">Options</th>
@@ -68,6 +69,7 @@ $result = mysqli_query($conn, $sql);
 					echo "<td>".$employee['address']."</td>";
 					echo "<td>".$employee['dept']."</td>";
 					echo "<td>".$employee['degree']."</td>";
+					echo "<td>".$employee['points']."</td>";
 
 					echo "<td><a href=\"edit.php?id=$employee[id]\">Edit</a> | <a href=\"delete.php?id=$employee[id]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>";
 

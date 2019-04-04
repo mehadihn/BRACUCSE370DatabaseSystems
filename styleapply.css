@@ -8,8 +8,8 @@ body{
 header{
 	background: black;
 	color: white;
-	padding: 8px 20px 6px 40px;
-	height: 50px;
+	padding: 16px 20px 6px 40px;
+	height: 60px;
 }
 
 header h1{
@@ -64,7 +64,7 @@ nav ul ul{
 
 .homered{
 	background-color: red;
-	padding: 30px 10px 22px 10px;
+	padding: 30px 10px 25px 10px;
 }
 
 .divider{
@@ -74,7 +74,7 @@ nav ul ul{
 
 .homeblack:hover{
 	background-color: blue;
-	padding: 30px 10px 21px 10px;
+	padding: 30px 10px 25px 10px;
 
 }
 

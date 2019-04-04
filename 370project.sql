@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 24, 2019 at 05:56 PM
+-- Generation Time: Apr 02, 2019 at 05:13 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.1
 
@@ -68,8 +68,8 @@ CREATE TABLE `employee` (
 --
 
 INSERT INTO `employee` (`id`, `firstName`, `lastName`, `email`, `password`, `birthday`, `gender`, `contact`, `nid`, `address`, `dept`, `degree`, `pic`) VALUES
-(134, 'Mehadi', 'Hassan', 'mehadi@xyz.corp', 'mehadi', '1997-08-13', 'Male', 1674775587, 123456789, 'Razarbagh', 'IT', 'Head', 'images/Untitled.png'),
-(135, 'John', 'Doe', 'john@xyz.corp', '1234', '2019-03-24', 'Male', 2147483647, 2147483647, 'UK', 'Management', 'HR', 'images/no.jpg');
+(134, 'Mehadi', 'Hassan', 'mehadi', 'mehadi', '1997-08-13', 'Male', 1674775587, 123456789, 'Razarbagh', 'IT', 'Head', 'images/Untitled.png'),
+(135, 'John', 'Doe', 'john@xyz.corp.uk', '1234', '2019-03-24', 'Male', 2147483647, 2147483647, 'UK', 'Management', 'HR', 'images/no.jpg');
 
 -- --------------------------------------------------------
 
@@ -94,6 +94,21 @@ INSERT INTO `employee_leave` (`id`, `token`, `start`, `end`, `reason`, `status`)
 (134, 109, '2019-04-14', '2019-03-31', 'GOT', 'Approved'),
 (134, 110, '2019-03-24', '2019-03-07', 'Sick', 'Cancelled'),
 (135, 111, '2019-03-16', '2019-03-22', 'Vacation', 'Approved');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `project`
+--
+
+CREATE TABLE `project` (
+  `pid` int(11) NOT NULL,
+  `eid` int(11) DEFAULT NULL,
+  `pname` varchar(100) DEFAULT NULL,
+  `duedate` date DEFAULT NULL,
+  `subdate` date DEFAULT '0000-00-00',
+  `status` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -141,6 +156,13 @@ ALTER TABLE `employee_leave`
   ADD KEY `employee_leave_ibfk_1` (`id`);
 
 --
+-- Indexes for table `project`
+--
+ALTER TABLE `project`
+  ADD PRIMARY KEY (`pid`),
+  ADD KEY `eid` (`eid`);
+
+--
 -- Indexes for table `salary`
 --
 ALTER TABLE `salary`
@@ -169,6 +191,12 @@ ALTER TABLE `employee_leave`
   MODIFY `token` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=112;
 
 --
+-- AUTO_INCREMENT for table `project`
+--
+ALTER TABLE `project`
+  MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
 -- Constraints for dumped tables
 --
 
@@ -177,6 +205,12 @@ ALTER TABLE `employee_leave`
 --
 ALTER TABLE `employee_leave`
   ADD CONSTRAINT `employee_leave_ibfk_1` FOREIGN KEY (`id`) REFERENCES `employee` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `project`
+--
+ALTER TABLE `project`
+  ADD CONSTRAINT `project_ibfk_1` FOREIGN KEY (`eid`) REFERENCES `employee` (`id`);
 
 --
 -- Constraints for table `salary`

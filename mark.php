@@ -52,10 +52,10 @@ if(isset($_POST['update']))
 <?php
   $id = (isset($_GET['id']) ? $_GET['id'] : '');
   $pid = (isset($_GET['pid']) ? $_GET['pid'] : '');
-  $sql = "SELECT pid, project.eid, pname, duedate, subdate, mark, points, firstName, lastName, base, bonus, total FROM `project` , `rank` ,`employee`, `salary`  WHERE project.eid = $id AND pid = $pid";
-  $result = mysqli_query($conn, $sql);
-  if($result){
-  while($res = mysqli_fetch_assoc($result)){
+  $sql1 = "SELECT pid, project.eid, project.pname, project.duedate, project.subdate, project.mark, rank.points, employee.firstName, employee.lastName, salary.base, salary.bonus, salary.total FROM `project` , `rank` ,`employee`, `salary`  WHERE project.eid = $id AND project.pid = $pid AND project.eid = rank.eid AND salary.id = project.eid AND employee.id = project.eid AND employee.id = rank.eid";
+  $result1 = mysqli_query($conn, $sql1);
+  if($result1){
+  while($res = mysqli_fetch_assoc($result1)){
   $pname = $res['pname'];
   $duedate = $res['duedate'];
   $subdate = $res['subdate'];
@@ -132,16 +132,22 @@ if(isset($_POST['update']))
 
                        
 
-                        
-                         <div class="input-group">
-                          <p>Due Date</p>
-                            <input class="input--style-1" type="text"  name="duedate" value="<?php echo $duedate;?>" readonly>
+
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                  <p>Due Date</p>
+                                     <input class="input--style-1" type="text" name="duedate" value="<?php echo $duedate;?>" readonly>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                  <p>Submission Date</p>
+                                    <input class="input--style-1" type="text"  name="subdate" value="<?php echo $subdate;?>" readonly>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="input-group">
-                          <p>Submission Date</p>
-                            <input class="input--style-1" type="text"  name="duedate" value="<?php echo $subdate;?>" readonly>
-                        </div>
 
                         <div class="input-group">
                           <p>Assign Mark</p>

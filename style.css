@@ -175,3 +175,7 @@ nav ul ul{
 .h2{
 	font-family: 'Montserrat', sans-serif;
 }
+
+img {
+  border-radius: 50%;
+}

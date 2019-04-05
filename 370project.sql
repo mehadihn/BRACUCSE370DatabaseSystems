@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 04, 2019 at 07:05 PM
+-- Generation Time: Apr 05, 2019 at 08:06 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.1
 
@@ -68,8 +68,9 @@ CREATE TABLE `employee` (
 --
 
 INSERT INTO `employee` (`id`, `firstName`, `lastName`, `email`, `password`, `birthday`, `gender`, `contact`, `nid`, `address`, `dept`, `degree`, `pic`) VALUES
-(151, 'Mehadi', 'Hassan', 'mehadi', 'mehadi', '2019-04-05', 'Male', '11', 11, '11', '11', '11', 'images/Untitled.png'),
-(155, 'a', 'a', 'a@a.com', '1234', '2019-05-03', 'Other', '1', 1, '1', '1', '1', 'images/no.jpg');
+(157, 'Mehadi', 'Hassan', 'mehadi', 'mehadi', '2019-04-19', 'Male', '0189191919', 12121, '212121', 'CSE', 'IT', 'images/22339446_1545895035475379_7532389051243944735_o.jpg'),
+(158, 'Shoaib', 'Dipu', 'dipu@xyz.corp', '1234', '2019-04-11', 'Male', '111111', 222222, 'UK', 'HR', 'CSE', 'images/no.jpg'),
+(159, 'Shemonto', 'Das', 'das@xyz.corp', '1234', '2019-01-03', 'Male', '01854747474', 23453221, 'Mohakhali', 'CSE', 'CSE', 'images/no.jpg');
 
 -- --------------------------------------------------------
 
@@ -91,7 +92,7 @@ CREATE TABLE `employee_leave` (
 --
 
 INSERT INTO `employee_leave` (`id`, `token`, `start`, `end`, `reason`, `status`) VALUES
-(151, 111, '2019-04-12', '2019-04-13', 'Sick', 'Pending');
+(157, 113, '2019-04-19', '2019-04-08', 'Sick', 'Approved');
 
 -- --------------------------------------------------------
 
@@ -114,9 +115,11 @@ CREATE TABLE `project` (
 --
 
 INSERT INTO `project` (`pid`, `eid`, `pname`, `duedate`, `subdate`, `mark`, `status`) VALUES
-(2, 151, 'Check', '2019-04-26', '2019-04-04', 10, 'Submitted'),
-(4, 155, 'aaa', '2019-04-26', '2019-04-04', 20, 'Submitted'),
-(5, 155, 'ccc', '2019-04-26', '2019-04-04', 10, 'Submitted');
+(9, 157, 'Survey', '2019-04-17', '2019-04-04', 20, 'Submitted'),
+(10, 157, 'Resource Management', '2019-05-24', '2019-04-04', 5, 'Submitted'),
+(11, 158, 'Fund Management', '2019-04-26', '2019-04-04', 50, 'Submitted'),
+(13, 159, 'ROBU', '2019-04-25', '2019-04-05', 2147483647, 'Submitted'),
+(14, 157, 'Sponsor', '2019-04-26', '2019-04-05', 6000, 'Submitted');
 
 -- --------------------------------------------------------
 
@@ -134,8 +137,9 @@ CREATE TABLE `rank` (
 --
 
 INSERT INTO `rank` (`eid`, `points`) VALUES
-(151, 70),
-(155, 30);
+(157, 0),
+(158, 0),
+(159, 0);
 
 -- --------------------------------------------------------
 
@@ -155,8 +159,9 @@ CREATE TABLE `salary` (
 --
 
 INSERT INTO `salary` (`id`, `base`, `bonus`, `total`) VALUES
-(151, 50000, 10, 55000),
-(155, 100, 30, 130);
+(157, 50000, 0, 50000),
+(158, 40000, 0, 40000),
+(159, 45000, 0, 45000);
 
 --
 -- Indexes for dumped tables
@@ -215,19 +220,19 @@ ALTER TABLE `alogin`
 -- AUTO_INCREMENT for table `employee`
 --
 ALTER TABLE `employee`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=156;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=160;
 
 --
 -- AUTO_INCREMENT for table `employee_leave`
 --
 ALTER TABLE `employee_leave`
-  MODIFY `token` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=112;
+  MODIFY `token` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=114;
 
 --
 -- AUTO_INCREMENT for table `project`
 --
 ALTER TABLE `project`
-  MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- Constraints for dumped tables

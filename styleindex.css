@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+body{
+	margin: 0px;
+}
+
+header{
+	background: black;
+	color: white;
+	padding: 8px 20px 6px 40px;
+	height: 50px;
+}
+
+header h1{
+	display: inline;
+	font-family: 'Lobster', cursive;
+	font-weight: 400;
+	font-size: 32px;
+	float: left;
+	margin-top: 0px;
+	margin-right: 10px;
+}
+
+nav ul {
+	display: inline;
+	padding: 0px;
+	float: right;
+}
+
+nav ul li{
+	display: inline-block;
+	list-style-type: none;
+	color: white;
+	float: left;
+	margin-left: 12px;
+	
+
+}
+
+nav ul li a{
+	color: white;
+	text-decoration: none;	
+}
+
+
+nav ul ul{
+	display: none;
+	position: absolute;
+}
+
+#navli ul li ul:hovar{
+	visibility: visible;
+	display: block;
+}
+
+
+
+
+
+#navli{
+	font-family: 'Montserrat', sans-serif;
+}
+
+.homered{
+	background-color: red;
+	padding: 30px 10px 22px 10px;
+}
+
+.divider{
+	background-color: red;
+	height: 5px;
+}
+
+.homeblack:hover{
+	background-color: blue;
+	padding: 30px 10px 21px 10px;
+
+}
+
+#divimg{
+	
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: : url('../images/back.jpg');
+	padding: 0px;
+	margin: 10px;
+	height: 100%;
+	width: 100%;
+}
+
+
+#registration{
+	padding: 2px 2px 2px 2px;
+	text-align: center;
+	background-color: #F0FFFF;
+	height: 100%;
+	width: auto;
+	background-position: center;
+}
+
+#textField{
+	width: 350px;
+	height: 50px;
+	padding: 5px;
+	border-radius: 5px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+
+#gender{
+	font-family: 'Montserrat', sans-serif;
+}
+
+#sub{
+	width: 350px;
+	height: 50px;
+	padding: 5px;
+	border-radius: 5px;
+	outline: 0px;
+	background-color: #0c6996;
+}
+
+.table-emp{
+	padding: 5px;
+	height: auto;
+	width: 100%;
+	font-family: 'Montserrat', sans-serif;
+	text-align: center;
+	background-color: #4CAF50;
+}
+
+.table-emp tr th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+
+.simple-form1{
+	margin-left: 10px; 
+	padding: 2px 2px 2px 2px;
+	text-align: center;
+	background-color: #F0FFFF;
+	height: auto;
+	width: auto;
+	background-position: center;
+	
+}
+
+
+
+.leavetable{
+	width: 100%;
+	height: auto;
+}
+
+#textField{
+	width: 350px;
+	height: 50px;
+	padding: 5px;
+	border-radius: 5px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+
+
+.info{
+	margin-left: 10px;
+	padding: 100px;
+}
+
+
+
+.h2{
+	font-family: 'Montserrat', sans-serif;
+}
+

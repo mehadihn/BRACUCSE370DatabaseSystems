@@ -1,0 +1,60 @@
+CREATE TABLE `employee` (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `firstName` varchar(100) NOT NULL,
+ `lastName` varchar(100) NOT NULL,
+ `email` varchar(100) NOT NULL,
+ `password` text NOT NULL,
+ `birthday` date NOT NULL,
+ `gender` varchar(10) NOT NULL,
+ `contact` varchar(20) NOT NULL,
+ `nid` int(20) NOT NULL,
+ `address` varchar(100) DEFAULT NULL,
+ `dept` varchar(100) NOT NULL,
+ `degree` varchar(100) NOT NULL,
+ `pic` text NOT NULL,
+ PRIMARY KEY (`id`),
+ UNIQUE KEY `email` (`email`)
+) 
+
+
+CREATE TABLE `employee_leave` (
+ `id` int(11) DEFAULT NULL,
+ `token` int(11) NOT NULL AUTO_INCREMENT,
+ `start` date DEFAULT NULL,
+ `end` date DEFAULT NULL,
+ `reason` char(100) DEFAULT NULL,
+ `status` char(50) DEFAULT NULL,
+ PRIMARY KEY (`token`),
+ KEY `employee_leave_ibfk_1` (`id`),
+ CONSTRAINT `employee_leave_ibfk_1` FOREIGN KEY (`id`) REFERENCES `employee` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) 
+
+CREATE TABLE `project` (
+ `pid` int(11) NOT NULL AUTO_INCREMENT,
+ `eid` int(11) DEFAULT NULL,
+ `pname` varchar(100) DEFAULT NULL,
+ `duedate` date DEFAULT NULL,
+ `subdate` date DEFAULT '0000-00-00',
+ `mark` int(11) NOT NULL,
+ `status` varchar(50) DEFAULT NULL,
+ PRIMARY KEY (`pid`),
+ KEY `project_ibfk_1` (`eid`),
+ CONSTRAINT `project_ibfk_1` FOREIGN KEY (`eid`) REFERENCES `employee` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) 
+
+
+CREATE TABLE `rank` (
+ `eid` int(11) NOT NULL,
+ `points` int(11) DEFAULT '0',
+ PRIMARY KEY (`eid`),
+ CONSTRAINT `rank_ibfk_1` FOREIGN KEY (`eid`) REFERENCES `employee` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) 
+
+CREATE TABLE `salary` (
+ `id` int(11) NOT NULL,
+ `base` int(11) NOT NULL,
+ `bonus` int(11) DEFAULT NULL,
+ `total` int(11) DEFAULT NULL,
+ PRIMARY KEY (`id`),
+ CONSTRAINT `salary_ibfk_1` FOREIGN KEY (`id`) REFERENCES `employee` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) 

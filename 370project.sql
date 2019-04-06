@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 05, 2019 at 08:06 AM
+-- Generation Time: Apr 06, 2019 at 02:46 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.1
 
@@ -68,9 +68,16 @@ CREATE TABLE `employee` (
 --
 
 INSERT INTO `employee` (`id`, `firstName`, `lastName`, `email`, `password`, `birthday`, `gender`, `contact`, `nid`, `address`, `dept`, `degree`, `pic`) VALUES
-(157, 'Mehadi', 'Hassan', 'mehadi', 'mehadi', '2019-04-19', 'Male', '0189191919', 12121, '212121', 'CSE', 'IT', 'images/22339446_1545895035475379_7532389051243944735_o.jpg'),
-(158, 'Shoaib', 'Dipu', 'dipu@xyz.corp', '1234', '2019-04-11', 'Male', '111111', 222222, 'UK', 'HR', 'CSE', 'images/no.jpg'),
-(159, 'Shemonto', 'Das', 'das@xyz.corp', '1234', '2019-01-03', 'Male', '01854747474', 23453221, 'Mohakhali', 'CSE', 'CSE', 'images/no.jpg');
+(101, 'Mehadi', 'Hassan', 'mehadi@xyz.corp', '1234', '1997-08-13', 'Male', '01674775587', 2147483647, 'Razarbagh', 'IT', 'Head', 'images/me.png'),
+(102, 'Test', 'Pilot', 'testpilot@gmail.com', '1234', '2018-01-01', 'Male', '0202', 303, 'Ad_______', 'CSE', 'CSE', 'images/no.jpg'),
+(103, 'Steven', 'Wilson', 'wilson@xyz.corp', '1234', '1990-02-02', 'Male', '5252', 6262, 'Thames, UK', 'Creative', 'MSc', 'images/sw-google.png'),
+(104, 'Guthrie', 'Govan', 'guthrie@xyz.corp', '1234', '1971-12-01', 'Male', '9595', 5959, 'Chemsford, USA', 'Creative', 'MSc', 'images/test.jpg'),
+(105, 'Elon', 'Musk', 'elon@spacex.com', '1234', '1971-06-28', 'Male', '8585', 5858, 'LA, USA', 'SpaceTech', 'BSc', 'images/330px-Elon_Musk_Royal_Society.jpg'),
+(106, 'Hacker', 'Man', 'hackerman@xyz.corp', '1234', '1990-02-02', 'Male', '7575', 5757, 'Underground, Dhaka', 'NetworkSecurity', 'MSc', 'images/hacker.png'),
+(107, 'Wonder ', 'Woman', 'wonderwoman@xyz.corp', '1234', '1993-03-03', 'Female', '4545', 5454, 'USA', 'Defense ', 'MS', 'images/no.jpg'),
+(108, 'Andrew', ' Ng', 'andrew@xyz.corp', '1234', '1976-04-16', 'Male', '758758', 857857, 'USA', 'AI', 'PhD', 'images/download.jpeg'),
+(109, 'Ian ', 'Goodfellow', 'ian@xyz.corp', '1234', '1985-01-01', 'Male', '852852', 258258, 'USA', 'AI', 'PhD', 'images/1-5.jpg'),
+(110, 'Christopher ', 'Manning', 'christopher@xyz.corp', '1234', '1965-09-18', 'Male', '147147', 741741, 'USA', 'NLP', 'PhD', 'images/download (1).jpeg');
 
 -- --------------------------------------------------------
 
@@ -92,7 +99,11 @@ CREATE TABLE `employee_leave` (
 --
 
 INSERT INTO `employee_leave` (`id`, `token`, `start`, `end`, `reason`, `status`) VALUES
-(157, 113, '2019-04-19', '2019-04-08', 'Sick', 'Approved');
+(101, 301, '2019-04-07', '2019-04-08', 'Sick Leave', 'Approved'),
+(102, 305, '2019-04-07', '2019-04-08', 'Urgent Family Cause', 'Approved'),
+(103, 306, '2019-04-08', '2019-04-08', 'Concert Tour', 'Approved'),
+(101, 307, '2019-04-14', '2019-04-30', 'Want to see GOT', 'Pending'),
+(105, 308, '2019-04-26', '2019-04-30', 'Launching Tesla Model Y', 'Pending');
 
 -- --------------------------------------------------------
 
@@ -115,11 +126,18 @@ CREATE TABLE `project` (
 --
 
 INSERT INTO `project` (`pid`, `eid`, `pname`, `duedate`, `subdate`, `mark`, `status`) VALUES
-(9, 157, 'Survey', '2019-04-17', '2019-04-04', 20, 'Submitted'),
-(10, 157, 'Resource Management', '2019-05-24', '2019-04-04', 5, 'Submitted'),
-(11, 158, 'Fund Management', '2019-04-26', '2019-04-04', 50, 'Submitted'),
-(13, 159, 'ROBU', '2019-04-25', '2019-04-05', 2147483647, 'Submitted'),
-(14, 157, 'Sponsor', '2019-04-26', '2019-04-05', 6000, 'Submitted');
+(201, 101, 'No1', '2019-04-09', '2019-04-06', 8, 'Submitted'),
+(202, 102, 'No2', '2019-04-10', '2019-04-06', 6, 'Submitted'),
+(203, 103, 'No3', '2019-04-11', '2019-04-06', 10, 'Submitted'),
+(204, 104, 'No4', '2019-04-12', '2019-04-06', 12, 'Submitted'),
+(205, 105, 'No5', '2019-04-13', '2019-04-06', 15, 'Submitted'),
+(206, 106, 'No6', '2019-04-14', '2019-04-06', 18, 'Submitted'),
+(207, 107, 'No7', '2019-04-14', '2019-04-06', 11, 'Submitted'),
+(208, 108, 'No8', '2019-04-15', '2019-04-06', 20, 'Submitted'),
+(209, 109, 'No9', '2019-04-16', '2019-04-06', 19, 'Submitted'),
+(210, 110, 'No10', '2019-04-19', '2019-04-06', 22, 'Submitted'),
+(211, 101, 'No11', '2019-04-20', '0000-00-00', 0, 'Due'),
+(212, 105, 'Tesla Model Y', '2019-04-25', '0000-00-00', 0, 'Due');
 
 -- --------------------------------------------------------
 
@@ -137,9 +155,16 @@ CREATE TABLE `rank` (
 --
 
 INSERT INTO `rank` (`eid`, `points`) VALUES
-(157, 0),
-(158, 0),
-(159, 0);
+(101, 8),
+(102, 6),
+(103, 10),
+(104, 12),
+(105, 15),
+(106, 18),
+(107, 11),
+(108, 20),
+(109, 19),
+(110, 22);
 
 -- --------------------------------------------------------
 
@@ -159,9 +184,16 @@ CREATE TABLE `salary` (
 --
 
 INSERT INTO `salary` (`id`, `base`, `bonus`, `total`) VALUES
-(157, 50000, 0, 50000),
-(158, 40000, 0, 40000),
-(159, 45000, 0, 45000);
+(101, 55000, 8, 59400),
+(102, 16500, 6, 17490),
+(103, 65000, 10, 71500),
+(104, 78000, 12, 87360),
+(105, 105111, 15, 120878),
+(106, 60000, 18, 70800),
+(107, 77000, 11, 85470),
+(108, 1000000, 20, 1200000),
+(109, 800000, 19, 952000),
+(110, 1200000, 22, 1464000);
 
 --
 -- Indexes for dumped tables
@@ -220,19 +252,19 @@ ALTER TABLE `alogin`
 -- AUTO_INCREMENT for table `employee`
 --
 ALTER TABLE `employee`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=160;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=111;
 
 --
 -- AUTO_INCREMENT for table `employee_leave`
 --
 ALTER TABLE `employee_leave`
-  MODIFY `token` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=114;
+  MODIFY `token` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=309;
 
 --
 -- AUTO_INCREMENT for table `project`
 --
 ALTER TABLE `project`
-  MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=213;
 
 --
 -- Constraints for dumped tables

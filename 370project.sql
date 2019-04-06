@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 06, 2019 at 07:40 PM
+-- Generation Time: Apr 06, 2019 at 08:34 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.1
 
@@ -104,7 +104,9 @@ INSERT INTO `employee_leave` (`id`, `token`, `start`, `end`, `reason`, `status`)
 (102, 305, '2019-04-07', '2019-04-08', 'Urgent Family Cause', 'Approved'),
 (103, 306, '2019-04-08', '2019-04-08', 'Concert Tour', 'Approved'),
 (101, 307, '2019-04-14', '2019-04-30', 'Want to see GOT', 'Pending'),
-(105, 308, '2019-04-26', '2019-04-30', 'Launching Tesla Model Y', 'Pending');
+(105, 308, '2019-04-26', '2019-04-30', 'Launching Tesla Model Y', 'Pending'),
+(111, 309, '2019-04-09', '2019-04-13', 'Visit to Kings Landing', 'Pending'),
+(104, 310, '2019-04-08', '2019-04-09', 'Emergency Leave', 'Pending');
 
 -- --------------------------------------------------------
 
@@ -127,18 +129,19 @@ CREATE TABLE `project` (
 --
 
 INSERT INTO `project` (`pid`, `eid`, `pname`, `duedate`, `subdate`, `mark`, `status`) VALUES
-(201, 101, 'No1', '2019-04-09', '2019-04-06', 8, 'Submitted'),
-(202, 102, 'No2', '2019-04-10', '2019-04-06', 6, 'Submitted'),
-(203, 103, 'No3', '2019-04-11', '2019-04-06', 10, 'Submitted'),
-(204, 104, 'No4', '2019-04-12', '2019-04-06', 12, 'Submitted'),
-(205, 105, 'No5', '2019-04-13', '2019-04-06', 15, 'Submitted'),
-(206, 106, 'No6', '2019-04-14', '2019-04-06', 18, 'Submitted'),
-(207, 107, 'No7', '2019-04-14', '2019-04-06', 11, 'Submitted'),
-(208, 108, 'No8', '2019-04-15', '2019-04-06', 20, 'Submitted'),
-(209, 109, 'No9', '2019-04-16', '2019-04-06', 19, 'Submitted'),
-(210, 110, 'No10', '2019-04-19', '2019-04-06', 22, 'Submitted'),
-(211, 101, 'No11', '2019-04-20', '0000-00-00', 0, 'Due'),
-(212, 105, 'Tesla Model Y', '2019-04-25', '0000-00-00', 0, 'Due');
+(213, 101, 'Database', '2019-04-07', '2019-04-04', 10, 'Submitted'),
+(214, 102, 'Test', '2019-04-10', '0000-00-00', 0, 'Due'),
+(215, 105, 'Tesla Model Y', '2019-04-19', '2019-04-06', 10, 'Submitted'),
+(216, 106, 'Hack', '2019-05-04', '2019-04-05', 5, 'Submitted'),
+(217, 111, 'Do Nothing', '2019-04-02', '2019-04-01', 8, 'Submitted'),
+(218, 105, 'Tesla Model X', '2019-04-03', '2019-04-03', 10, 'Submitted'),
+(219, 101, 'PHP', '2019-04-07', '0000-00-00', 0, 'Due'),
+(220, 110, 'Data Analysis', '2019-04-16', '2019-04-04', 8, 'Submitted'),
+(221, 110, 'Data Analysis', '2019-04-16', '2019-04-04', 7, 'Submitted'),
+(222, 103, 'Statistical', '2019-04-19', '2019-04-04', 6, 'Submitted'),
+(223, 108, 'Software Scema', '2019-04-09', '2019-04-02', 3, 'Submitted'),
+(224, 107, 'Security Check', '2019-04-26', '2019-04-05', 9, 'Submitted'),
+(225, 109, 'ML', '2019-04-03', '2019-04-04', 6, 'Submitted');
 
 -- --------------------------------------------------------
 
@@ -156,17 +159,17 @@ CREATE TABLE `rank` (
 --
 
 INSERT INTO `rank` (`eid`, `points`) VALUES
-(101, 8),
-(102, 6),
-(103, 10),
-(104, 12),
-(105, 15),
-(106, 18),
-(107, 11),
-(108, 20),
-(109, 19),
-(110, 22),
-(111, 0);
+(101, 10),
+(102, 0),
+(103, 6),
+(104, 0),
+(105, 20),
+(106, 5),
+(107, 9),
+(108, 3),
+(109, 6),
+(110, 15),
+(111, 8);
 
 -- --------------------------------------------------------
 
@@ -186,17 +189,17 @@ CREATE TABLE `salary` (
 --
 
 INSERT INTO `salary` (`id`, `base`, `bonus`, `total`) VALUES
-(101, 55000, 8, 59400),
-(102, 16500, 6, 17490),
-(103, 65000, 10, 71500),
-(104, 78000, 12, 87360),
-(105, 105111, 15, 120878),
-(106, 60000, 18, 70800),
-(107, 77000, 11, 85470),
-(108, 1000000, 20, 1200000),
-(109, 800000, 19, 952000),
-(110, 1200000, 22, 1464000),
-(111, 45000, 0, 45000);
+(101, 55000, 10, 60500),
+(102, 16500, 0, 16500),
+(103, 65000, 6, 68900),
+(104, 78000, 0, 78000),
+(105, 105000, 20, 126000),
+(106, 60000, 5, 63000),
+(107, 77000, 9, 83930),
+(108, 50000, 3, 51500),
+(109, 85000, 6, 90100),
+(110, 47000, 15, 54050),
+(111, 45000, 8, 48600);
 
 --
 -- Indexes for dumped tables
@@ -261,13 +264,13 @@ ALTER TABLE `employee`
 -- AUTO_INCREMENT for table `employee_leave`
 --
 ALTER TABLE `employee_leave`
-  MODIFY `token` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=309;
+  MODIFY `token` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=311;
 
 --
 -- AUTO_INCREMENT for table `project`
 --
 ALTER TABLE `project`
-  MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=213;
+  MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=226;
 
 --
 -- Constraints for dumped tables

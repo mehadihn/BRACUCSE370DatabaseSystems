@@ -1,7 +1,7 @@
 <?php
 
 require_once ('process/dbh.php');
-$sql = "SELECT * from `project` order by pid";
+$sql = "SELECT * from `project` order by subdate desc";
 
 //echo "$sql";
 $result = mysqli_query($conn, $sql);

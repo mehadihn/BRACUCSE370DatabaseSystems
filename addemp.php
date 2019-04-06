@@ -74,6 +74,7 @@
                         <div class="input-group">
                             <input class="input--style-1" type="email" placeholder="Email" name="email" required="required">
                         </div>
+                        <p>Birthday</p>
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">

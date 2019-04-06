@@ -43,12 +43,14 @@
                         </div>
                         <div class="row row-space">
                             <div class="col-2">
+                            	<p>Start Date</p>
                                 <div class="input-group">
                                     <input class="input--style-1" type="date" placeholder="start" name="start">
                                    
                                 </div>
                             </div>
                             <div class="col-2">
+                            	<p>End Date</p>
                                 <div class="input-group">
                                     <input class="input--style-1" type="date" placeholder="end" name="end">
                                    

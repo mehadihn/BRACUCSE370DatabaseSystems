@@ -59,7 +59,7 @@ $result = mysqli_query($conn, $sql);
 					echo "<td>".$employee['firstName']." ".$employee['lastName']."</td>";
 					
 					echo "<td>".$employee['base']."</td>";
-					echo "<td>".$employee['bonus']."</td>";
+					echo "<td>".$employee['bonus']." %</td>";
 					echo "<td>".$employee['total']."</td>";
 					
 					

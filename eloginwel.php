@@ -134,7 +134,7 @@ $result3 = mysqli_query($conn, $sql3);
 					
 					
 					echo "<td>".$employee['base']."</td>";
-					echo "<td>".$employee['bonus']."</td>";
+					echo "<td>".$employee['bonus']." %</td>";
 					echo "<td>".$employee['total']."</td>";
 					
 				}

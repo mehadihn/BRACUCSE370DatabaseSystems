@@ -22,6 +22,8 @@ Created with help of YouTube, Google, GitHub, Stack Overflow and so on.
 * Javascript
 * My SQL
 
+### ER Diagram and Relational Schema is also provided as PDF's. 
+
 ## Istallation Guide:
 1. Clone the whole repository to your localhost folder.
 2. Launch XAMPP (or any other similar service) and start Apache, My SQL
@@ -39,3 +41,5 @@ ID: User's Email Address
 
 Pass: 1234 (By Default, User can change if they wish)
 
+
+Ignore the noob level coding. ^_^

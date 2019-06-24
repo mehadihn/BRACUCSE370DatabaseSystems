@@ -30,7 +30,7 @@ Created with help of YouTube, Google, GitHub, Stack Overflow, free templates on 
 3. Goto phpmyadmin and create a database named **370project** and then import the file named **370project.sql**
 4. Then launch the site.
 
-## Login info:
+## Login Info:
 ### Admin Panel:
 ID: admin
 

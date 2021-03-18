@@ -1,7 +1,10 @@
 # Employee Management System Database
 
 Hello There, It is a simple university project of database course. I have made a simple UI and basic SQL commands to make this project.
-Created with help of YouTube, Google, GitHub, Stack Overflow, free templates on the internet and so on. 
+Created with help of YouTube, Google, GitHub, Stack Overflow, free templates on the internet and so on.
+
+### Group Members:
+[Shoaib Ahmed Dipu](https://shoaibdipu.github.io/) | [Shemonto Das](https://shemonto.github.io/)
 
 ## This site features:
 ### Admin Panel:
@@ -40,6 +43,3 @@ Pass: admin
 ID: User's Email Address
 
 Pass: 1234 (By Default, User can change if they wish)
-
-
-Ignore the noob level coding. ^_^
